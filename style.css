@@ -18,14 +18,27 @@ main {
     position: relative;
 }
 
-.table {
+.container {
+    background-image: url("./images/librarypng/table.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    background-position: bottom center;
+    height: 500px;
+    width: 1340px;
+    position: fixed;
+    bottom: -100px;
+    background-color: transparent;
+}
+
+/* .table {
     image-rendering: pixelated;
     background-color: transparent;
     max-width: 1340px;
     min-height: 500px;
     position: fixed;
     bottom: -200px;
-}
+} */
 
 .abook {
     display: flex;
@@ -48,11 +61,13 @@ main {
 
 .books {
     position: absolute;
-    top: 10px;
+    top: -230px;
     display: flex;
-    height: 400px;
+    height: 350px;
     flex-wrap: wrap;
     width: 900px;
-    flex-direction: column;
+    flex-direction: column-reverse;
+
+
 
 }

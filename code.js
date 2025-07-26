@@ -1,6 +1,6 @@
 let myLibrary = [];
 const books = document.querySelector(".books");
-const colors=["red.png", "yellow.png", "darkblue.png", "pink.png","green.png","lightblue.png"]
+const colors = ["red.png", "yellow.png", "darkblue.png", "pink.png", "green.png", "lightblue.png"]
 
 
 function Book(title, author, pages, read, id) {
@@ -28,7 +28,7 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 function displayBooks() {
-    let z= 1;
+    let z = 1;
     myLibrary.forEach(book => {
         let abook = document.createElement("div")
         abook.textContent = book.info();
@@ -37,18 +37,30 @@ function displayBooks() {
         let strPath="./images/librarypng/"
         abook.style.backgroundImage= 'url("'+ strPath + randomBg + '")';
         abook.style.zIndex=z++;
-        books.insertBefore(abook, books.firstChild)
-        // books.appendChild(abook);
+        books.appendChild(abook);
     });
 
+    // for (let i = myLibrary.length - 1; i >= 0; i--) {
+    //     let abook = document.createElement("div");
+    //     abook.textContent = myLibrary[i].info();
+    //     abook.classList.add("abook");
+
+    //     let randomBg = colors[Math.floor(Math.random() * colors.length)];
+    //     let strPath = "./images/librarypng/";
+    //     abook.style.backgroundImage = 'url("' + strPath + randomBg + '")';
+
+    //     abook.style.zIndex = z++;
+    //     books.appendChild(abook); // or insertBefore if you want reverse order
+    // }
+    // books.appendChild(abook);
 }
 
 addBookToLibrary("some", "me", 1, false)
-addBookToLibrary("some", "me", 2, false)
+ addBookToLibrary("some", "me", 2, false)
 addBookToLibrary("some", "me", 3, false)
 addBookToLibrary("some", "me", 4, false)
 addBookToLibrary("some", "me", 5, false)
-// addBookToLibrary("some", "me", 5, false)
-// addBookToLibrary("some", "me", 5, false)
+ addBookToLibrary("some", "me", 6, false)
+addBookToLibrary("some", "me", 7, false)
 console.log(myLibrary)
 displayBooks();
