@@ -1,8 +1,16 @@
+@font-face {
+    font-family: "kiwisoda";
+    src: url("./fonts/KiwiSoda.ttf");
+}
+
 * {
     padding: 0px;
-    margin: 0px;
+    /* margin: 0px; */
+    font-family: "kiwisoda";
+    scroll-behavior: smooth;
 
 }
+
 
 main {
     display: flex;
@@ -54,9 +62,12 @@ main {
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: -21px;
+    margin-top: -40px;
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
+    font-size: 24px;
+    padding-top: 18px;
+
 }
 
 .books {
@@ -67,6 +78,7 @@ main {
     flex-wrap: wrap;
     width: 900px;
     flex-direction: column-reverse;
+    
 }
 
 .addBook {
@@ -85,7 +97,21 @@ main {
     right: 30px;
 
 }
-.addBook:hover{
 
+.addBook:hover {
     background-image: url("./images/librarypng/addHover.png");
+}
+
+
+.diaContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dialog{
+
+    width: 500px;
+    height: 200px;
+    text-align: center;
+
 }

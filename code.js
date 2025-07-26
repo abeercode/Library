@@ -55,6 +55,15 @@ function displayBooks() {
     // books.appendChild(abook);
 }
 
+
+const but= document.querySelector(".addBook")
+const dia= document.querySelector(".dialog")
+
+but.addEventListener("click", ()=>{
+
+    dia.showModal()
+})
+
 addBookToLibrary("some", "me", 1, false)
  addBookToLibrary("some", "me", 2, false)
 addBookToLibrary("some", "me", 3, false)
@@ -62,5 +71,8 @@ addBookToLibrary("some", "me", 4, false)
 addBookToLibrary("some", "me", 5, false)
  addBookToLibrary("some", "me", 6, false)
 addBookToLibrary("some", "me", 7, false)
+addBookToLibrary("some", "me", 8, false)
+ addBookToLibrary("some", "me", 9, false)
+addBookToLibrary("some", "me", 10, false)
 console.log(myLibrary)
 displayBooks();
